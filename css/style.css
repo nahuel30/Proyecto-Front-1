@@ -1,0 +1,369 @@
+/* DESKTOP FIRST */
+html {
+  font-size: 15px;
+  /* Media Query para Mobile */
+  /* Media Query para Tablet */
+}
+html body {
+  font-family: Arial, sans-serif;
+  background-color: #c5e1a5;
+  /*FLEX*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+}
+html body header {
+  display: block;
+  background-color: #9ccc65;
+  width: 100%;
+  /*links del nav bar*/
+}
+html body header .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: #558b2f;
+  /*ANIMACION*/
+  display: inline-block; /* Necesario para usar transform */
+  transition: all 0.3s;
+}
+html body header .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+  transform: scale(1.2); /* Agranda el enlace en un 20% */
+}
+html body header .logo img {
+  width: 40px;
+  height: 40px;
+  margin: 7px;
+}
+html body main {
+  /*Ancho maximo*/
+  max-width: 90vw;
+  flex-direction: column;
+  /* Para colocar el footer siempre hacia el final */
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+html body main .grilla-inicio {
+  /*GRID*/
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 50%);
+  place-items: center;
+  padding: 2rem;
+  background-color: #9ccc65;
+  border-radius: 15px;
+}
+html body main .grilla-inicio .item {
+  align-content: center;
+  width: auto;
+  height: 50vh;
+}
+html body main .grilla-sobremi {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  padding: 2rem;
+  background-color: #9ccc65;
+  border-radius: 15px;
+}
+html body main .grilla-sobremi .item {
+  align-content: center;
+  width: auto;
+  height: 30vh;
+}
+html body main .grilla-servicios {
+  display: grid;
+  grid-template-rows: 15vh 40vh;
+  grid-template-columns: repeat(2, auto);
+  place-items: center;
+  padding: 2rem;
+  background-color: #9ccc65;
+  border-radius: 15px;
+}
+html body main .grilla-servicios .item {
+  align-content: center;
+  width: auto;
+  height: 30vh;
+}
+html body main .grilla-proyectos {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  padding: 2rem;
+  background-color: #9ccc65;
+  border-radius: 15px;
+}
+html body main .grilla-proyectos .item {
+  align-content: center;
+  width: auto;
+  height: 30vh;
+}
+html body main .formulario-contacto {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 30% 70%;
+  place-items: center;
+  align-content: center;
+  width: 35vw;
+  height: 50vh;
+  padding: 2rem;
+  background-color: #9ccc65;
+  border-radius: 15px;
+  grid-template-areas: "nombre text-box" "correo text-box" "mensaje text-box";
+  /*Items del formulario*/
+}
+html body main .formulario-contacto .item {
+  align-content: center;
+  width: 50%;
+  height: auto;
+}
+html body main .formulario-contacto .nombre {
+  grid-area: nombre;
+}
+html body main .formulario-contacto .correo {
+  grid-area: correo;
+}
+html body main .formulario-contacto .mensaje {
+  grid-area: mensaje;
+}
+html body main .formulario-contacto .item-form {
+  /*FLEX*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body footer {
+  background-color: #9ccc65;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+html body footer form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+html body button {
+  background-color: #9ccc65;
+  color: #fff;
+  border-radius: 5px;
+}
+html body p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  html body main {
+    max-width: 100vw;
+  }
+  html body main .grilla-inicio {
+    display: grid;
+    grid-template-rows: repeat(2, 45vh);
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  html body main .grilla-inicio .item {
+    align-content: center;
+    width: 50vw;
+    height: auto;
+  }
+  html body main .grilla-sobremi {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    place-items: center;
+    grid-template-areas: "text1" "img" "text2" "video";
+  }
+  html body main .grilla-sobremi .item {
+    align-content: center;
+    width: 80vw;
+    height: auto;
+  }
+  html body main .grilla-sobremi .text1 {
+    grid-area: text1;
+  }
+  html body main .grilla-sobremi .text2 {
+    grid-area: text2;
+  }
+  html body main .grilla-sobremi img {
+    grid-area: img;
+  }
+  html body main .grilla-sobremi iframe {
+    grid-area: video;
+  }
+  html body main .grilla-servicios {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 1rem;
+    grid-template-areas: "text1" "mapa" "text2" "video";
+  }
+  html body main .grilla-servicios .item {
+    align-content: center;
+    width: 80vw;
+    height: auto;
+  }
+  html body main .grilla-servicios .text1 {
+    grid-area: text1;
+  }
+  html body main .grilla-servicios .text2 {
+    grid-area: text2;
+  }
+  html body main .grilla-servicios .mapa {
+    grid-area: mapa;
+  }
+  html body main .grilla-servicios .video {
+    grid-area: video;
+  }
+  html body main .grilla-proyectos {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    grid-template-areas: "text1" "img2" "text2" "img1";
+  }
+  html body main .grilla-proyectos .item {
+    align-content: center;
+    width: 80vw;
+    height: auto;
+  }
+  html body main .grilla-proyectos .text1 {
+    grid-area: text1;
+  }
+  html body main .grilla-proyectos .text2 {
+    grid-area: text2;
+  }
+  html body main .grilla-proyectos .img1 {
+    grid-area: img1;
+  }
+  html body main .grilla-proyectos .img2 {
+    grid-area: img2;
+  }
+  html body main .formulario-contacto {
+    min-width: 90vw;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 30% 70%;
+    place-items: center;
+  }
+  html body main .formulario-contacto .item {
+    align-content: center;
+    width: auto;
+    height: auto;
+  }
+  html p {
+    font-size: 0.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  html body main {
+    max-width: 100vw;
+  }
+  html body main .grilla-inicio {
+    /*GRID*/
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 50%);
+    place-items: center;
+  }
+  html body main .grilla-inicio .item {
+    align-content: center;
+    width: auto;
+    height: 50vh;
+  }
+  html body main .grilla-sobremi {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    place-items: center;
+    grid-template-areas: "text1" "img" "text2" "video";
+  }
+  html body main .grilla-sobremi .item {
+    align-content: center;
+    width: 70vw;
+    height: auto;
+  }
+  html body main .grilla-sobremi .text1 {
+    grid-area: text1;
+  }
+  html body main .grilla-sobremi .text2 {
+    grid-area: text2;
+  }
+  html body main .grilla-sobremi img {
+    grid-area: img;
+  }
+  html body main .grilla-sobremi iframe {
+    grid-area: video;
+  }
+  html body main .grilla-servicios {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    place-items: center;
+    grid-template-areas: "text1" "mapa" "text2" "video";
+  }
+  html body main .grilla-servicios .item {
+    align-content: center;
+    width: 80vw;
+    height: 40vh;
+  }
+  html body main .grilla-servicios .text1 {
+    grid-area: text1;
+  }
+  html body main .grilla-servicios .text2 {
+    grid-area: text2;
+  }
+  html body main .grilla-servicios .mapa {
+    grid-area: mapa;
+  }
+  html body main .grilla-servicios .video {
+    grid-area: video;
+  }
+  html body main .grilla-proyectos {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    grid-template-areas: "text1 img1" "img2 text2";
+  }
+  html body main .grilla-proyectos .item {
+    align-content: center;
+    width: 40vw;
+    height: auto;
+  }
+  html body main .grilla-proyectos .text1 {
+    grid-area: text1;
+  }
+  html body main .grilla-proyectos .text2 {
+    grid-area: text2;
+  }
+  html body main .grilla-proyectos .img1 {
+    grid-area: img1;
+  }
+  html body main .grilla-proyectos .img2 {
+    grid-area: img2;
+  }
+  html body main .formulario-contacto {
+    min-width: 90vw;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 30% 70%;
+    place-items: center;
+  }
+  html body main .formulario-contacto .item {
+    align-content: center;
+    width: auto;
+    height: auto;
+  }
+  html p {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

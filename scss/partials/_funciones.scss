@@ -1,0 +1,30 @@
+@import "variables";
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin estilo-caja{
+	padding: 2rem;
+	background-color: $primary-color;
+	border-radius: 15px;
+}
+
+@mixin grid-filas-columnas-ancho-alto($filas, $columnas, $ancho, $alto) {
+    display: grid;
+	grid-template-rows: $filas;
+	grid-template-columns: $columnas;
+	place-items: center;
+    .item{
+		// Hace responsive imagenes, videos y mapas.
+		@include ancho-alto($ancho, $alto)
+	}
+}
+
+@mixin ancho-alto($ancho, $alto){
+	align-content: center;
+    width: $ancho;
+    height: $alto;
+}
