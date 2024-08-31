@@ -20,7 +20,26 @@ html{
 
 			/*Color para los links del nav bar*/
 			.navbar-collapse{
+				.search-box {
+					position: relative;
+				}
+
+				.search-box input {
+					padding-right: 45px; /* Ajusta el espacio para el botón */
+				}
+
+				.search-box button {
+					position: absolute;
+					right: 5px;
+					top: 50%;
+					transform: translateY(-50%);
+					border: none;
+					background: none;
+					color: #558b2f;
+					cursor: pointer;
+				}
 				.navbar-nav{
+
 					.nav-item{
 						.nav-link{
 							color: $nav-text-color;
