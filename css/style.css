@@ -18,7 +18,7 @@ html body header {
   display: block;
   background-color: #9ccc65;
   width: 100%;
-  /*links del nav bar*/
+  /*Color para los links del nav bar*/
 }
 html body header .navbar-collapse .navbar-nav .nav-item .nav-link {
   color: #558b2f;
@@ -32,11 +32,10 @@ html body header .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
 html body header .logo img {
   width: 40px;
   height: 40px;
-  margin: 7px;
 }
 html body main {
   /*Ancho maximo*/
-  max-width: 90vw;
+  max-width: 60vw;
   flex-direction: column;
   /* Para colocar el footer siempre hacia el final */
   flex: 1;
@@ -169,7 +168,7 @@ html body p {
   }
   html body main .grilla-inicio .item {
     align-content: center;
-    width: 50vw;
+    width: 60vw;
     height: auto;
   }
   html body main .grilla-sobremi {
@@ -226,7 +225,7 @@ html body p {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
-    grid-template-areas: "text1" "img2" "text2" "img1";
+    grid-template-areas: "text1" "img1" "text2" "img2";
   }
   html body main .grilla-proyectos .item {
     align-content: center;
@@ -362,7 +361,7 @@ html body p {
     height: auto;
   }
   html p {
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
 }
 
