@@ -20,6 +20,25 @@ html{
 
 			/*Color para los links del nav bar*/
 			.navbar-collapse{
+				.dropdown:hover {
+					.dropdown-menu{
+						display: block;
+						margin-top: 0; /* Opcional, para evitar el pequeño salto hacia abajo */
+						li{
+							.bi{
+								color: $nav-text-color;
+								padding-left: 10px;
+							}
+							.dropdown-item{
+								width: 170px;
+								height: 50px;
+								text-align: center;
+								font-size: 15px;
+							}
+						}
+						
+					}
+				}
 				.search-box {
 					position: relative;
 				}
@@ -39,10 +58,10 @@ html{
 					cursor: pointer;
 				}
 				.navbar-nav{
-
 					.nav-item{
 						.nav-link{
 							color: $nav-text-color;
+							font-size: 18px;
 							/*ANIMACION*/
 							display: inline-block; /* Necesario para usar transform */
 							transition: all 0.3s;
