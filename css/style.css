@@ -66,15 +66,17 @@ html body header .logo img {
   height: 40px;
 }
 html body main {
-  /*Ancho maximo*/
-  max-width: 60vw;
   flex-direction: column;
+  align-items: center;
   /* Para colocar el footer siempre hacia el final */
   flex: 1;
   display: flex;
   justify-content: space-around;
 }
 html body main .grilla-inicio {
+  /*Ancho maximo*/
+  max-width: 60vw;
+  margin-top: 2rem;
   /*GRID*/
   display: grid;
   grid-template-rows: 1fr;
@@ -89,7 +91,14 @@ html body main .grilla-inicio .item {
   width: auto;
   height: 50vh;
 }
+html body main .grilla-inicio .carousel {
+  align-content: center;
+  width: 100vw;
+  height: auto;
+}
 html body main .grilla-sobremi {
+  /*Ancho maximo*/
+  max-width: 60vw;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
@@ -104,9 +113,11 @@ html body main .grilla-sobremi .item {
   height: 30vh;
 }
 html body main .grilla-servicios {
+  /*Ancho maximo*/
+  max-width: 60vw;
   display: grid;
-  grid-template-rows: 15vh 40vh;
-  grid-template-columns: repeat(2, auto);
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   place-items: center;
   padding: 2rem;
   background-color: #9ccc65;
@@ -117,7 +128,15 @@ html body main .grilla-servicios .item {
   width: auto;
   height: 30vh;
 }
+html body main .grilla-servicios h1 {
+  align-self: self-start;
+}
+html body main .grilla-servicios img {
+  margin-left: 3rem;
+}
 html body main .grilla-proyectos {
+  /*Ancho maximo*/
+  max-width: 60vw;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
@@ -132,6 +151,8 @@ html body main .grilla-proyectos .item {
   height: 30vh;
 }
 html body main .formulario-contacto {
+  /*Ancho maximo*/
+  max-width: 60vw;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: 30% 70%;
@@ -164,6 +185,10 @@ html body main .formulario-contacto .item-form {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+html body main .carousel {
+  width: 100vw;
+  height: auto;
 }
 html body footer {
   background-color: #9ccc65;
